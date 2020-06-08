@@ -1,0 +1,40 @@
+package com.calculator;
+
+class A
+{
+    int i;
+    public void show()
+    {
+        System.out.println("In Class A " + i);
+    }
+
+}
+
+class B extends A
+{
+    public void show()
+    {
+        super.i = 4;
+        super.show();
+        System.out.println("In Class B");
+    }
+
+}
+class C extends A
+{
+    public void show()
+    {
+        System.out.println("Ic Class C");
+    }
+}
+public class Main
+{
+    public static void main(String[] args)
+    {
+        A obj = new B(); // runtime polymorphism
+        obj.show();
+
+        obj = new C();
+        obj.show();
+    }
+}D

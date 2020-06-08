@@ -1,0 +1,28 @@
+package com.calculator;
+
+import java.io.*;
+import java.util.Properties;
+
+public class Main
+{
+    public static void main(String[] args) throws Exception
+    {
+        //CREATE
+        Properties p = new Properties();
+        OutputStream os = new FileOutputStream("DataConfig.properties");
+        p.setProperty("Url","localhost L 3306/mybd");
+        p.setProperty("Uname","Navin");
+        p.setProperty("pass","0000");
+        p.store(os,null);
+
+
+        InputStream is = new FileInputStream("DataConfig.properties");
+        p.load(is);
+
+        System.out.println(p.getProperty("Uname"));
+        System.out.println(p.getProperty("Url"));
+        p.list(System.out);
+
+
+    }
+}
