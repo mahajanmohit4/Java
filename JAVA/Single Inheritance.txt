@@ -1,0 +1,29 @@
+package com.calculator;
+
+class A
+{
+    int a;
+    public void show()
+    {
+        a = 8;
+        System.out.println("In Class A ");
+    }
+}
+
+class B extends A
+{
+    public void display()
+    {
+        System.out.println("In Class B");
+    }
+}
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        B obj = new B();
+        obj.show();
+        obj.display();
+    }
+}
